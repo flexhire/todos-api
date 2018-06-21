@@ -23,6 +23,7 @@ gem 'faker'
 # gem 'rack-cors'
 
 gem "pg", "~> 0.18"
+gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
@@ -45,6 +46,7 @@ group :development do
   gem "capistrano", "~> 3.10", require: false
   gem "capistrano-rails", "~> 1.4", require: false
   gem 'capistrano-rvm'
+  gem 'capistrano-passenger'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
